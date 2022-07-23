@@ -1,0 +1,619 @@
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+$nav-color: #353535;
+$nav-color-logo: #f2f2f2;
+
+header{
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../multimedia/main_background/main_background_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    nav{
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 22px;
+        padding-bottom: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #ffffff;
+        // position: sticky;
+        // top: 0;
+        position: fixed;
+        top: 0;
+        border-bottom: 1px solid #dbdbdb;
+        z-index: 20;
+        .menu__logo{
+            width: 10%;
+            a{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .menu__opciones{
+            margin: auto;
+            width: 70%;
+            text-align: center;
+            a{
+                padding-left: 12px;
+                padding-right: 12px;
+                text-decoration: none;
+                color: #002D61;
+                line-height: 2.5;
+                // border-right: 1px solid #dbdbdb;
+                // border-left: 1px solid #dbdbdb;
+                &:hover{
+                    color: #085bb9;
+                    &::before{
+                        content: "";
+                    }
+                }
+            }
+            .menu__contacto{
+                padding: 8px;
+                border-radius: 2px;
+                border: 1px solid #002D61;
+                &:hover{
+                    background: #002D61;
+                    color: #f2f2f2;
+                }
+            }
+        }
+        .menu__desplegable{
+            display: none;
+            a{
+                color: #002D61;
+                text-decoration: none;
+                i{
+                    color: #002D61;
+                }
+            }
+        }
+        .menu__redes{
+            line-height: 2.5;
+            text-align: center;
+            width: 10%;
+            a{
+                padding-left: 5px;
+                padding-right: 5px;
+                i{
+                    font-size: 28px;
+                    color: #002D61;
+                }
+            }
+        }
+    }
+    .info-principal{
+        width: 60%;
+        padding: 5%;
+        margin-left: 8%;
+        margin-top: 50px;
+        padding-top: 12%;
+        h2{
+            color: #002D61;
+            font-size: 35px;
+        }
+        hr{
+            opacity: 0.4;
+        }
+        p{
+            line-height: 1.8;
+            color: #353535;
+        }
+        a{
+            padding: 2%;
+            color: #f2f2f2;
+            background-color: #002D61;
+            border: 1px solid #002D61;
+            border-radius: 8px;
+            text-decoration: none;
+            &:hover{
+                background: none;
+                color: #00152c;
+            }
+        }
+    }
+}
+
+.menu_desplegable_menu{
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100 !important;
+    background-color: white;
+    padding: 2%;
+    border-left: 1px solid #dbdbdb;
+    margin-right: 100%;
+    display: none;
+    img{
+        width: 70%;
+        margin: auto;
+    }
+    hr{
+        opacity: 0.4;
+    }
+    ul{
+        list-style: none;
+        li{
+            margin-top: 22px;
+            margin-bottom: 22px;
+            margin-left: -40px;
+            a{
+                text-decoration: none;
+                color: #002D61;
+                &:hover{
+                    color: #C479D9;
+                }
+            }
+        }
+    }
+}
+
+.menu_desplegable_menu_show{
+    margin-right: 0;
+    display: block;
+}
+
+.container_opacity{
+    opacity: 0.7;
+}
+
+.about{
+    padding: 5%;
+    width: 100%;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px -7px 15px -13px rgba(0,0,0,0.45); 
+    box-shadow: 0px -7px 15px -13px rgba(0,0,0,0.45);
+    .about_info{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        .about_info_left{
+            padding: 2%;
+            width: 50%;
+            h1{
+                color: #002D61;
+                font-size: 52px;
+            }
+            hr{
+                opacity: 0.4;
+            }
+            p{
+                line-height: 1.8;
+                color: #353535;
+            }
+            a{
+                text-decoration: none;
+                padding: 12px;
+                color: #f2f2f2;
+                background-color: #002D61;
+                border-radius: 4px;
+                &:hover{
+                    background-color: #002D61;
+                }
+            }
+        }
+        .about_info_right{
+            padding: 2%;
+            width: 40%;
+            img{
+                margin: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.servicios{
+    padding: 5%;
+    width: 100%;
+    .servicios_article{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        .servicios_article_info{
+            padding: 1%;
+            background-color: #f2f2f2;
+            margin-left: 12px;
+            margin-right: 12px;
+            -webkit-box-shadow: 0px 5px 15px -16px #000000; 
+            box-shadow: 0px 5px 15px -16px #000000;
+            p:nth-child(1){
+                font-size: 18px;
+                color: #002D61;
+            }
+            p:nth-child(2){
+                line-height: 1.5;
+                text-align: justify;
+                color: #2f2f2f;
+            }
+            a{
+                text-decoration: none;
+                color: #f2f2f2;
+                background-color: #002D61;
+                padding: 2.5%;
+                border-radius: 4px;
+                &:hover{
+                    background-color: #024999;
+                }
+            }
+
+        }
+    }
+}
+
+.subscribe{
+    // background-color: #BF8845;
+    background-image: url(../multimedia/main_background/main_background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    .subscribe_section{
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        .subscribe_section_info{
+            font-size: 18px;
+            width: 50%;
+            color: #141414;
+            line-height: 1.8;
+            text-align: center;
+        }
+        .subscribe_section_input{
+            width: 50%;
+            padding: 1%;
+            h4{
+                font-size: 25px;
+                color: #141414;
+                text-align: center;
+            }
+            input[type=text]{
+                padding: 12px;
+                width: 100%;
+                border-style: none;
+                border-radius: 25px;
+                background-color: #f5f5f5;
+                border: 1px solid #4d707e;
+                color: #2f2f2f;
+                outline: none;
+            }
+            a{
+                color: #f2f2f2;
+                text-decoration: none;
+                padding: 12px;
+                background-color: #002D61;
+                border-radius: 25px;
+                &:hover{
+                    background-color: #0075FA;
+                }
+            }
+        }
+    }
+}
+
+.travels{
+    padding-top: 5%;
+    width: 100%;
+    h3{
+        color: #00152c;
+        font-size: 32px;
+        text-align: center;
+    }
+    .travels__article{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        .travales__article__countries{
+            padding: 5px;
+            width: 25%;
+            margin:auto;
+            img{
+                width: 100%;
+                border-radius: 2%;
+            }
+            p{
+                text-align: center;
+                font-weight: bold;
+                font-size: 22px;
+                position: relative;
+                top: -50px;
+                border-radius: 2%;
+                padding: 2%;
+                color: #f2f2f2;
+                background-color: #00152cef;
+                -webkit-box-shadow: 0px 10px 15px -18px #000000; 
+                box-shadow: 0px 10px 15px -18px #000000;
+            }
+        }
+    }
+}
+
+.ubicacion{
+    padding-top: 2%;
+    padding-bottom: 5%;
+    width: 100%;
+    h3{
+        font-size: 35px;
+        color: #00152c;
+        text-align: center;
+    }
+    .ubicacion__map{
+        iframe{
+            width: 100%;
+        }
+        p{
+            margin-top: 0px;
+            background-color: #00152c;
+            padding-top: 2%;
+            padding-left: 2%;
+            padding-bottom: 2%;
+            text-align: center;
+            font-weight: bold;
+            color: #f2f2f2;
+            span{
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+.clientes{
+    padding: 5%;
+    width: 100%;
+    h3{
+        font-size: 35px;
+        color: #00152c;
+        text-align: center;
+    }
+    hr{
+        opacity: 0.4;
+        margin-bottom: 2%;
+    }
+    .clientes_clientes{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        img{
+            width: 10%;
+        }
+    }
+}
+
+.contacto{
+    padding: 5%;
+    width: 100%;
+    h3{
+        font-size: 35px;
+        color: #00152c;
+        text-align: center;
+    }
+    p{
+        text-align: center;
+        color: #00152c;
+        font-size: 25px;
+    }
+    hr{
+        opacity: 0.4;
+        margin-bottom: 2%;
+    }
+    .contacto__formulario{
+        width: 60%;
+        margin: auto;
+        form{
+            max-width: 100%;
+            margin: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            label{
+                color: #00152c;
+                font-size: 18px;
+                margin-bottom: 12px;
+                margin-left: 4%;
+            }
+            input[type=text]{
+                margin-bottom: 25px;
+                border-style: none;
+                background-color: #f0f0f0;
+                width: 100%;
+                padding: 2%;
+                border-radius: 25px;
+                outline: none;
+                color: #00152c;
+            }
+            textarea{
+                resize: none;
+                margin-bottom: 25px;
+                border-style: none;
+                background-color: #f0f0f0;
+                width: 100%;
+                padding: 2%;
+                border-radius: 25px;
+                outline: none;
+                color: #00152c;
+            }
+        }
+    }
+}
+
+footer{
+    background-color: #002147;
+    width: 100%;
+    padding: 5%;
+    .informacion__logo{
+        width: 40%;
+        margin: auto;
+        margin-bottom: 2%;
+        img{
+            width: 100%;
+        }
+    }
+    hr{
+        opacity: 0.1;
+        margin-bottom: 2%;
+
+    }
+    .informacion__redes{
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        a{
+            font-size: 45px;
+            margin-left: 2%;
+            margin-right: 2%;
+            color: #0075FA;
+        }
+    }
+    p{
+        text-align: center;
+        color: #f2f2f2;
+        margin-top: 5%;
+    }
+}
+
+
+@media (max-width: 1000px){
+    header{
+        nav{
+            .menu__opciones{
+                display: none;
+            }
+            .menu__redes{
+                display: none;
+            }
+            .menu__desplegable{
+                display: block;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 700px){
+    header{
+        height: 600px;
+        .info-principal{
+            width: 80%;
+            h2{
+                font-size: 22px;
+            }
+        }
+        nav{
+            .menu__logo{
+                width: 30%;
+            }
+        }
+    }
+    .travels, .ubicacion, .clientes, .contacto{
+        h3{
+            font-size: 20px;
+        }
+    }
+    .about{
+        .about_info{
+            flex-direction: column;
+            .about_info_left{
+                order: 2;
+                width: 90%;
+                h1{
+                    text-align: center;
+                    font-size: 25px;
+                }
+                p{
+                    text-align: justify;
+                }
+            }
+            .about_info_right{
+                order: 1;
+                width: 70%;
+            }
+        }
+    }
+    .servicios{
+        .servicios_article{
+            flex-direction: column;
+            .servicios_article_info{
+                margin-bottom: 5%;
+                padding-top: 5%;
+                padding-bottom: 8%;
+                width: 100%;
+            }
+        }
+    }
+    .subscribe{
+        padding-top: 5%;
+        padding-bottom: 8%;
+        .subscribe_section{
+            flex-direction: column;
+            .subscribe_section_info{
+                width: 90%;
+            }
+            .subscribe_section_input{
+                width: 90%;
+            }
+        }
+    }
+    .contacto{
+        .contacto__formulario{
+            width: 95%;
+        }
+    }
+    .travels{
+        .travels__article{
+            flex-direction: column;
+            .travales__article__countries{
+                width: 50%;
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .clientes{
+        .clientes_clientes{
+            img{
+                width: 22%;
+            }
+        }
+    }
+}
