@@ -421,6 +421,7 @@ header .info-principal a:hover {
 .contacto .contacto__formulario {
   width: 60%;
   margin: auto;
+  text-align: center;
 }
 .contacto .contacto__formulario form {
   max-width: 100%;
@@ -457,6 +458,16 @@ header .info-principal a:hover {
   border-radius: 25px;
   outline: none;
   color: #00152c;
+}
+.contacto .envio {
+  text-decoration: none;
+  padding: 2%;
+  background-color: #00152c;
+  color: #f2f2f2;
+  border-radius: 4px;
+}
+.contacto .envio:hover {
+  background-color: #002D61;
 }
 
 footer {

@@ -437,6 +437,7 @@ header{
     .contacto__formulario{
         width: 60%;
         margin: auto;
+        text-align: center;
         form{
             max-width: 100%;
             margin: auto;
@@ -472,6 +473,16 @@ header{
                 outline: none;
                 color: #00152c;
             }
+        }
+    }
+    .envio{
+        text-decoration: none;
+        padding: 2%;
+        background-color: #00152c;
+        color: #f2f2f2;
+        border-radius: 4px;
+        &:hover{
+            background-color: #002D61;
         }
     }
 }
